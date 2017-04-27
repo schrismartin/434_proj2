@@ -5,10 +5,7 @@ import errno
 
 class node:
     def __init__(self, string):
-        print string
-        line = string.lstrip("\n")
-        line = string.rstrip("\n")
-        print line
+        line = string
         one = line.find("8")
         two = line.find("@")
         three = two + 1
@@ -78,6 +75,7 @@ bae.close()
 
 while len(nodes) < totalNodes:
     n = nodes[i]
+    print "node {} has port {}" .format(i, n.port)
 
     if n.status == 0:
         i = i + 1
