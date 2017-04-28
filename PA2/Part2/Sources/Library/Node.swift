@@ -8,33 +8,42 @@
 
 import Foundation
 
-public class Node {
+/// Wrapper class for Node objects
+public final class Node {
     
-    enum Availability: Int {
+    /// Marks whether a node is or isn't available.
+    ///
+    /// - undetermined: Node has not been checked for availability
+    /// - available: Node is available for connection.
+    /// - unavailabile: Node is not available for connection.
+    public enum Availability: Int {
+        
+        /// Node has not been checked for availability
+        case undetermined = -1
+        
+        /// Node is available for connection
         case available = 1
+        
+        /// Node is unavailable for connection
         case unavailabile = 0
     }
     
     /// Node identifier
-    var id: String
+    public var id: String
     
     /// Source IP Address
-    var address: String
+    public var address: String
     
     /// Source Port
-    var port: Int
+    public var port: Int
     
-    var availablility: Availability
+    /// Marks whether the node can be connected to.
+    public var availablility: Availability
     
-    convenience init?(data: Data) {
-        guard let payload = String(data: data, encoding: .utf8) else {
-            return nil
-        }
-        
-        try self.init(payload: payload)
-    }
-    
-    convenience init?(payload: String) {
+    /// Create a new node using a raw string representing the node.
+    ///
+    /// - Parameter payload: String containing node id, ip address, and port.
+    public convenience init?(payload: String) {
         // Trim payload before parsing
         let payload = payload.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -57,7 +66,14 @@ public class Node {
         self.init(id: id, address: address, port: port, availability: .available)
     }
     
-    init(id: String, address: String, port: Int, availability: Availability) {
+    /// Creates a new node from an id, address, port, and availablility enum.
+    ///
+    /// - Parameters:
+    ///   - id: Identifier of the node, which is a 64-character hex string.
+    ///   - address: IP address of node
+    ///   - port: port of node
+    ///   - availability: Whether a node can be connected to.
+    private init(id: String, address: String, port: Int, availability: Availability) {
         self.id = id
         self.address = address
         self.port = port

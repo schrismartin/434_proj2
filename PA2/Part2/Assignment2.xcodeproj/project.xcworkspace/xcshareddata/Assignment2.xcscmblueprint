@@ -1,4 +1,5 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AB4D165A05FED6D15285B630738E11AD0EFC5AD1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -9,13 +10,13 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9B09EFA-DED6-4B7A-AB22-E530A5E022D9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "AB4D165A05FED6D15285B630738E11AD0EFC5AD1" : "..",
-    "9BE9D417DFF2C108330E2C3DFD9D454205A39188" : "Part2\/Sockets\/SwiftSocket\/",
-    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "Part2\/.build\/checkouts\/BlueSocket-4701229415198575842\/"
+    "AB4D165A05FED6D15285B630738E11AD0EFC5AD1" : "NetSec\/",
+    "9BE9D417DFF2C108330E2C3DFD9D454205A39188" : "NetSec\/PA2\/Part2\/Sockets\/SwiftSocket\/",
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "NetSec\/PA2\/Part2\/.build\/checkouts\/BlueSocket-4701229415198575842\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Assignment2",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Assignment2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PA2\/Part2\/Assignment2.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/schrismartin\/Documents\/School\/Spring2017\/NetSec\/PA2\/Part2\/.build\/repositories\/BlueSocket-4701229415198575842",

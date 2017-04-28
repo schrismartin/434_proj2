@@ -10,19 +10,11 @@ import Foundation
 import Darwin
 
 /// Errors thrown during the lifetime of the application
-///
-/// - badArgc: Incorrect number of arguments
-/// - badArgv: Unexpected argument sequence
-enum AppError: Error {
+internal enum AppError: Error {
     
     case invalidPayload
     case communicationFailure
     case closedNode(port: Int)
-    
-    /// Errors relating to command-line argument parsing
-    ///
-    /// - badArgc: Incorrect number of arguments
-    /// - badArgv: Unexpected argument sequence
     
     enum ParseError: Error {
         case extractId(payload: String)
@@ -45,14 +37,14 @@ enum AppError: Error {
 }
 
 /// Namespace providing numerous helper functions.
-class Utils {
+public class Utils {
     
     /// This class should not be initialized.
     private init() { }
     
     /// Print the correct usage of the program.
     public class func usage() {
-        print("usage: l n g Pm Pc")
+        print("usage:")
         exit(-1)
     }
     

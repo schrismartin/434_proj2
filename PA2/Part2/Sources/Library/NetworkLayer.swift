@@ -9,23 +9,34 @@
 import Foundation
 import Socket
 
-final class Communicator {
+/// Handles communication between the server and the client
+final public class Communicator {
     
+    /// Socket used to communicate
     public var socket: SocketConnection
     
+    /// Sockets may return multiple peers at a time. This stores
+    /// all data returned from a call, and `getPeer()` will pop from
+    /// the buffer and replinish when necessary.
     fileprivate var bufferData = [String]()
     
+    /// Create a `Communicator` meant to interface with a given node while
+    /// setting the node's `availibility` flag based on connection status.
+    ///
+    /// - Parameter node: Node in which to talk to.
     public convenience init(using node: Node) {
         let destination = node.address
         let port = node.port
         
         self.init(destination: destination, port: port)
-        
-        if socket.status == .closed {
-            node.availablility = .unavailabile
-        }
+        assignAvailability(for: node)
     }
     
+    /// Create a socket that talks to a
+    ///
+    /// - Parameters:
+    ///   - destination: IP Address acting as the destination of the request.
+    ///   - port: Port number to connect to.
     public init(destination: String, port: Int) {
         socket = SocketConnection(destination: destination, port: port)
     }
@@ -34,6 +45,17 @@ final class Communicator {
 
 extension Communicator {
     
+    /// Set a node's `availability` flag based on connectivity
+    ///
+    /// - Parameter node: Subject Node
+    func assignAvailability(for node: Node) {
+        switch socket.status {
+        case .open: node.availablility = .available
+        case .closed: node.availablility = .unavailabile
+        }
+    }
+    
+    /// Reset the used socket
     func resetSocket() {
         let destination = socket.destination
         let port = socket.port
@@ -46,30 +68,67 @@ extension Communicator {
 // MARK: - Poll for Peers
 extension Communicator {
     
-    public func getPeer() -> Node? {
-        do {
+    /// Returns whether a node is unique
+    public typealias NodeUniquenessEvaluator = (_ node: Node) -> Bool
+    
+    /// Get the peers of a node
+    ///
+    /// - Parameters:
+    ///   - node: Subject Node
+    ///   - count: Number of expected peer nodes (Default: 20)
+    ///   - timeout: Number of times to poll unique node until passing
+    ///   - evaluator: Determine whether node is unique
+    /// - Returns: Set of peer nodes
+    @discardableResult
+    public func getPeers(of node: Node, count: Int = 20, timeout: Int = 10, evaluator: NodeUniquenessEvaluator) -> Set<Node> {
+        var nodeSet = Set<Node>()
+        guard socket.status == .open else { return nodeSet }
         
-            let peerData = try getPeerString()
-            return Node(payload: peerData)
-        } catch {
-            return getPeer()
+        var counter = 0
+        while nodeSet.count != count, counter < timeout {
+            guard let node = getPeer() else { continue }
+            nodeSet.insert(node)
+            
+            let isUnique = evaluator(node)
+            if isUnique {
+                counter = 0
+            } else {
+                counter += 1
+            }
         }
+        
+        return nodeSet
     }
     
-    private func getPeerString() throws -> String {
+    /// Return one peer node from the server. If one cannot be obtained,
+    /// the function will recursively call itself until it has received one.
+    ///
+    /// - Returns: Peer node
+    public func getPeer() -> Node? {
+        let peerData = getPeerString()
+        return Node(payload: peerData)
+    }
+    
+    /// Get a peer string from the buffer. If buffer is empty, repopulate the
+    /// buffer using a call from the server.
+    ///
+    /// - Returns: Unparsed `PEERS` response string
+    private func getPeerString() -> String {
         var peerData = bufferData.popFirst()
+        
+        // When while loop exits, peerData must have value
         while peerData == nil {
-            try populateBuffer()
+            populateBuffer()
             peerData = bufferData.popFirst()
         }
         
-        // If returns, peer data must not equal nil
         return peerData!
     }
     
-    private func populateBuffer() throws {
-        try sendPeerRequest()
-        let data = try fetchPeerData()
+    /// Sends peer request and fetches the results. Stores result in buffer.
+    private func populateBuffer() {
+        sendPeerRequest()
+        let data = fetchPeerData()
         
         let string = String(data: data, encoding: .utf8)!
         bufferData = string.components(separatedBy: "\n")
@@ -78,33 +137,31 @@ extension Communicator {
         }
     }
     
-    private func sendPeerRequest() throws {
+    /// Send `PEERS` request to server. Throws `fatalError` if socket cannot
+    /// write to the port.
+    private func sendPeerRequest() {
         let peersRequest = "PEERS\n"
         do {
-            if !socket.socket.remoteConnectionClosed {
-                _ = try socket.socket.write(from: peersRequest)
-            } else {
-                resetSocket()
-                _ = try socket.socket.write(from: peersRequest)
-            }
+        _ = try socket.write(from: peersRequest)
         } catch {
-            resetSocket()
-            try sendPeerRequest()
+            fatalError("sendPeerRequest was unable to write to socket "
+                + "with destination port \(socket.port). (err: \(error))")
         }
     }
     
-    private func fetchPeerData() throws -> Data {
-        var data = Data()
-        try _ = socket.socket.read(into: &data)
-        return data
-    }
-    
-    private func decodePeer(from data: Data) throws -> Node? {
-        if let payload = String(data: data, encoding: .utf8) {
-            return Node(payload: payload)
-        } else {
-            throw AppError.communicationFailure
+    /// Get the response from `PEERS` request from the port.
+    ///
+    /// - Returns: Returned data from socket in response to PEERS data.
+    private func fetchPeerData() -> Data {
+        do {
+            var data = Data()
+            try _ = socket.read(into: &data)
+            return data
+        } catch {
+            fatalError("fetchPeerData was unable to read from socket"
+                + "with destination port \(socket.port). (err: \(error)")
         }
+        
     }
     
 }

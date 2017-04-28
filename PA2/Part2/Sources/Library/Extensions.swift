@@ -42,3 +42,17 @@ extension Array {
     }
     
 }
+
+extension Set {
+    
+    /// Determines whether the set is full.
+    ///
+    /// - Parameter expected: Expected number of elements (default: nil)
+    /// - Returns: Whether the set reaches or exceeds capacity
+    func isFull(expected: Int? = nil) -> Bool {
+        guard let count = expected else { return false }
+        return self.count >= count
+    }
+    
+}
+
