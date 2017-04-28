@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/master.swiftdeps"
+  },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Extensions.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions.swiftdeps"
+  },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/main.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/main.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/main.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/main.swiftdeps"
+  },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Utilities.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Utilities.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Utilities.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Utilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Utilities.swiftdeps"
+  }
+}

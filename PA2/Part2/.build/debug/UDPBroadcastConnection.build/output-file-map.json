@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/UDPBroadcastConnection.build/master.swiftdeps"
+  },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/UDPBroadcastConnection/UDPBroadcastConnection.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/UDPBroadcastConnection.build/UDPBroadcastConnection.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/UDPBroadcastConnection.build/UDPBroadcastConnection.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/UDPBroadcastConnection.build/UDPBroadcastConnection~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/UDPBroadcastConnection.build/UDPBroadcastConnection.swiftdeps"
+  }
+}

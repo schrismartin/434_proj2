@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
+options: "debd38f7946d83af61b8b49f181c01e5"
+build_time: [546559886, 467847000]
+inputs:
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/checkouts/BlueSocket-4701229415198575842/Sources/Socket.swift": [546559885, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/checkouts/BlueSocket-4701229415198575842/Sources/SocketProtocols.swift": [546559885, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/checkouts/BlueSocket-4701229415198575842/Sources/SocketUtils.swift": [546559885, 0]

@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled 
+026e2f05fe7aa6a11cfca33d6c13f723620799a0 refs/heads/development
+46a9ea6746396ce72438569a32d880c2b7ce13bd refs/heads/master
+026e2f05fe7aa6a11cfca33d6c13f723620799a0 refs/heads/swift-tcp-client
+888cf1827231bd7a2431f04633835734e4f47d0e refs/tags/1.0
+7bc4940cd3d1584ffbb257dfb9c9905e9bf4a76e refs/tags/1.0.0
+a8ce3eef2b788a94038ec01d3bd9b4296cce3fbd refs/tags/1.0.1
+888cf1827231bd7a2431f04633835734e4f47d0e refs/tags/1.1
+888cf1827231bd7a2431f04633835734e4f47d0e refs/tags/2.0
+6eb8d48b37e4d53cdfec0aa62b5d7ceb31eda4ec refs/tags/2.0.1
