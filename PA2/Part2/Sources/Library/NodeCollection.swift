@@ -8,11 +8,21 @@
 
 import Foundation
 
+protocol NodeCollectionDelegate: class {
+    
+    func populationUpdated(percentage: Double)
+    
+}
+
 /// Collection of Peer Nodes
 class NodeCollection {
     
+    typealias ProgressIndicator = (_ percent: Double) -> Void
+    
     /// Peer Nodes
     public var nodes = Set<Node>()
+    
+    public weak var delegate: NodeCollectionDelegate?
     
     /// Queue for processing nodes
     private var processQueue = [Node]()
@@ -35,7 +45,9 @@ class NodeCollection {
             guard communicator.socket.status == .open else { continue }
             
             communicator.getPeers(of: node, evaluator: { (node) -> Bool in
-                return logUnique(node: node)
+                let isUnique = logUnique(node: node)
+                if isUnique { getPercentage(expecting: expected) }
+                return isUnique
             })
         }
         
@@ -74,6 +86,13 @@ class NodeCollection {
             return true
         } else {
             return false
+        }
+    }
+    
+    private func getPercentage(expecting: Int?) {
+        if let expecting = expecting {
+            let percentage = Double(nodes.count) / Double(expecting)
+            delegate?.populationUpdated(percentage: percentage)
         }
     }
     

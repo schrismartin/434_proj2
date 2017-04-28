@@ -7,18 +7,26 @@
 //
 
 import Foundation
+import Darwin
 
 /// Main Application to be run.
-class MainApplication {
+class MainApplication: NodeCollectionDelegate {
     
     /// Program execution point
     ///
     /// - Parameter args: Commandline arguments
     init(args: [String]) {
-        
         let collection = NodeCollection()
-        collection.populate(destination: "160.36.57.98", port: 15012)
+        collection.delegate = self
+        
+        collection.populate(destination: "160.36.57.98", port: 15012, expected: 240)
         collection.printNodes()
+    }
+    
+    func populationUpdated(percentage: Double) {
+        let completed = String(format: "%3.0lf", arguments: [percentage * 100])
+        fputs("Nodes Gathered: [\(completed)%]\r", stdout)
+        fflush(stdout)
     }
     
 }

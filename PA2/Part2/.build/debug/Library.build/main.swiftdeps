@@ -1,120 +1,22 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "MainApplication"
 provides-nominal:
-- "C7Library15MainApplication"
 provides-member:
-- ["C7Library15MainApplication", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - "CommandLine"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "MainApplication"
-- "String"
-- !private "StringLiteralType"
-- !private "URL"
-- !private "URLSession"
-- "print"
-- "sleep"
 depends-member:
-- !private ["Ps9AnyObject", "URL"]
-- !private ["Ps9AnyObject", "URLSession"]
-- !private ["Ps9AnyObject", "default"]
 - ["Ps9AnyObject", "init"]
-- ["Ps9AnyObject", ""]
-- !private ["Ps7CVarArg", "default"]
-- !private ["Ps7CVarArg", "init"]
 - ["Os11CommandLine", "arguments"]
-- !private ["Ps10Comparable", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "default"]
-- !private ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "init"]
-- !private ["Ps23CustomStringConvertible", "default"]
-- !private ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps9Equatable", "default"]
-- !private ["Ps9Equatable", "init"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps26ExpressibleByStringLiteral", "init"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps8Hashable", "default"]
-- !private ["Ps8Hashable", "init"]
-- !private ["Ps25LosslessStringConvertible", "init"]
-- ["C7Library15MainApplication", "String"]
-- !private ["C7Library15MainApplication", "URL"]
-- !private ["C7Library15MainApplication", "URLSession"]
-- ["C7Library15MainApplication", "deinit"]
 - ["C7Library15MainApplication", "init"]
-- !private ["Ps10MirrorPath", "init"]
-- !private ["PSo8NSCoding", "init"]
-- !private ["PSo9NSCopying", "default"]
-- !private ["PSo9NSCopying", "init"]
-- !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSObject", "default"]
-- !private ["CSo8NSObject", "init"]
-- !private ["PSo16NSObjectProtocol", "default"]
-- !private ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo14NSSecureCoding", "init"]
-- !private ["CSo8NSString", "init"]
-- !private ["P10Foundation20ReferenceConvertible", "init"]
-- !private ["SS", "init"]
-- !private ["Ps16TextOutputStream", "init"]
-- !private ["Ps20TextOutputStreamable", "init"]
-- !private ["V10Foundation3URL", "init"]
-- !private ["CSo10URLSession", "init"]
-- !private ["CSo23URLSessionConfiguration", "default"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
-- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps9_Hashable", "default"]
-- !private ["Ps9_Hashable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["P7Library22NodeCollectionDelegate", "init"]
 depends-nominal:
 - "Ps9AnyObject"
-- !private "Ps7CVarArg"
 - "Os11CommandLine"
-- !private "Ps10Comparable"
-- !private "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
-- !private "Ps23CustomStringConvertible"
-- !private "Ps9Equatable"
-- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps26ExpressibleByStringLiteral"
-- !private "Ps33ExpressibleByUnicodeScalarLiteral"
-- !private "Ps8Hashable"
-- !private "Ps25LosslessStringConvertible"
 - "C7Library15MainApplication"
-- !private "Ps10MirrorPath"
-- !private "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- !private "PSo16NSMutableCopying"
-- !private "CSo8NSObject"
-- !private "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
-- !private "P10Foundation20ReferenceConvertible"
-- !private "SS"
-- !private "Ps16TextOutputStream"
-- !private "Ps20TextOutputStreamable"
-- !private "V10Foundation3URL"
-- !private "CSo10URLSession"
-- !private "CSo23URLSessionConfiguration"
-- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps34_ExpressibleByBuiltinStringLiteral"
-- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- !private "Ps34_ExpressibleByFileReferenceLiteral"
-- !private "Ps33_ExpressibleByStringInterpolation"
-- !private "Ps35_HasCustomAnyHashableRepresentation"
-- !private "Ps9_Hashable"
-- !private "Ps21_ObjectiveCBridgeable"
+- "P7Library22NodeCollectionDelegate"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
@@ -130,4 +32,5 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
-interface-hash: "9dd6be850f06befe83206f38fcc5f9e9"
+- "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Socket.swiftmodule"
+interface-hash: "2982a39c8ef5c442f19980d24963acbf"
