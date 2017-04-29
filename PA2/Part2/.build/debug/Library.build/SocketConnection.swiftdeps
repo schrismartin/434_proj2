@@ -10,6 +10,7 @@ provides-member:
 - ["OC7Library16SocketConnection6Status", ""]
 - ["C7Library16SocketConnection", "write"]
 - ["C7Library16SocketConnection", "read"]
+- ["C7Library16SocketConnection", "close"]
 provides-dynamic-lookup:
 depends-top-level:
 - "=="
@@ -122,6 +123,7 @@ depends-member:
 - !private ["C7Library16SocketConnection", "SocketConnection"]
 - ["C7Library16SocketConnection", "Status"]
 - ["C7Library16SocketConnection", "String"]
+- ["C7Library16SocketConnection", "close"]
 - ["C7Library16SocketConnection", "deinit"]
 - ["C7Library16SocketConnection", "destination"]
 - !private ["C7Library16SocketConnection", "fatalError"]
@@ -267,4 +269,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
 - "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Socket.swiftmodule"
-interface-hash: "4d4d07161ad2bcf61644893cc1b31a92"
+interface-hash: "f305bff206e04357290b27ea9dea81a8"

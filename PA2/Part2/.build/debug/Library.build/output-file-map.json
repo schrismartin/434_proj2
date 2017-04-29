@@ -2,6 +2,18 @@
   "": {
     "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/master.swiftdeps"
   },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Communicator.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Communicator.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Communicator.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Communicator~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Communicator.swiftdeps"
+  },
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/ConnectionManager.swift": {
+    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/ConnectionManager.d",
+    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/ConnectionManager.swift.o",
+    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/ConnectionManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/ConnectionManager.swiftdeps"
+  },
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Extensions.swift": {
     "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions.d",
     "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Extensions.swift.o",
@@ -19,12 +31,6 @@
     "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/MainApplication.swift.o",
     "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/MainApplication~partial.swiftmodule",
     "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/MainApplication.swiftdeps"
-  },
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NetworkLayer.swift": {
-    "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/NetworkLayer.d",
-    "object": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/NetworkLayer.swift.o",
-    "swiftmodule": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/NetworkLayer~partial.swiftmodule",
-    "swift-dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/NetworkLayer.swiftdeps"
   },
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Node.swift": {
     "dependencies": "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Library.build/Node.d",

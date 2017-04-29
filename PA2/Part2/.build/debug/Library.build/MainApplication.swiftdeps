@@ -10,6 +10,7 @@ depends-top-level:
 - !private "*"
 - !private "Array"
 - "AssignmentPrecedence"
+- !private "ConnectionManager"
 - "Double"
 - !private "IntegerLiteralType"
 - "MainApplication"
@@ -17,23 +18,32 @@ depends-top-level:
 - "NodeCollectionDelegate"
 - "String"
 - !private "StringLiteralType"
+- !private "Utils"
 - !private "fflush"
 - !private "fputs"
 - !private "stdout"
 depends-member:
+- !private ["Ps9AnyObject", "ConnectionManager"]
 - !private ["Ps9AnyObject", "NodeCollection"]
 - !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "Utils"]
+- !private ["Ps9AnyObject", "closeAll"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "fflush"]
 - !private ["Ps9AnyObject", "fputs"]
 - !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "listenAll"]
 - !private ["Ps9AnyObject", "populate"]
 - ["Ps9AnyObject", "populationUpdated"]
 - !private ["Ps9AnyObject", "printNodes"]
+- !private ["Ps9AnyObject", "shared"]
 - !private ["Ps9AnyObject", "stdout"]
+- !private ["Ps9AnyObject", "wait"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps10Comparable", "init"]
+- !private ["C7Library17ConnectionManager", "closeAll"]
+- !private ["C7Library17ConnectionManager", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "init"]
@@ -44,9 +54,11 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["C7Library15MainApplication", "ConnectionManager"]
 - ["C7Library15MainApplication", "Double"]
 - !private ["C7Library15MainApplication", "NodeCollection"]
 - ["C7Library15MainApplication", "String"]
+- !private ["C7Library15MainApplication", "Utils"]
 - ["C7Library15MainApplication", "deinit"]
 - !private ["C7Library15MainApplication", "fflush"]
 - !private ["C7Library15MainApplication", "fputs"]
@@ -62,10 +74,13 @@ depends-member:
 - !private ["CSo8NSString", "init"]
 - !private ["C7Library14NodeCollection", "delegate"]
 - !private ["C7Library14NodeCollection", "init"]
+- !private ["C7Library14NodeCollection", "listenAll"]
 - !private ["C7Library14NodeCollection", "populate"]
 - !private ["C7Library14NodeCollection", "printNodes"]
+- !private ["P7Library22NodeCollectionDelegate", "ConnectionManager"]
 - !private ["P7Library22NodeCollectionDelegate", "NodeCollection"]
 - !private ["P7Library22NodeCollectionDelegate", "String"]
+- !private ["P7Library22NodeCollectionDelegate", "Utils"]
 - !private ["P7Library22NodeCollectionDelegate", "fflush"]
 - !private ["P7Library22NodeCollectionDelegate", "fputs"]
 - ["P7Library22NodeCollectionDelegate", "populationUpdated"]
@@ -74,6 +89,7 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["C7Library5Utils", "wait"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
@@ -86,6 +102,7 @@ depends-nominal:
 - "Ps9AnyObject"
 - !private "Ps7CVarArg"
 - !private "Ps10Comparable"
+- !private "C7Library17ConnectionManager"
 - !private "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
@@ -109,6 +126,7 @@ depends-nominal:
 - !private "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- !private "C7Library5Utils"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"

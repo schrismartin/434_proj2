@@ -1,0 +1,166 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ConnectionManager"
+provides-nominal:
+- "C7Library17ConnectionManager"
+provides-member:
+- ["C7Library17ConnectionManager", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "Communicator"
+- "ConnectionManager"
+- "Int"
+- "Node"
+- "String"
+depends-member:
+- ["Ps9AnyObject", "Communicator"]
+- ["Ps9AnyObject", "ConnectionManager"]
+- ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "address"]
+- !private ["Ps9AnyObject", "getCommunicator"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "killConnection"]
+- !private ["Ps9AnyObject", "port"]
+- !private ["Ps9AnyObject", "socket"]
+- !private ["Ps9AnyObject", "sockets"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "index"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "keys"]
+- !private ["Ps7CVarArg", "removeValue"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps10Collection", "index"]
+- ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "keys"]
+- !private ["Ps10Collection", "removeValue"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["C7Library12Communicator", "init"]
+- !private ["C7Library12Communicator", "socket"]
+- ["C7Library17ConnectionManager", "Bool"]
+- ["C7Library17ConnectionManager", "Communicator"]
+- ["C7Library17ConnectionManager", "ConnectionManager"]
+- ["C7Library17ConnectionManager", "Int"]
+- ["C7Library17ConnectionManager", "Node"]
+- ["C7Library17ConnectionManager", "String"]
+- ["C7Library17ConnectionManager", "closeAll"]
+- ["C7Library17ConnectionManager", "deinit"]
+- ["C7Library17ConnectionManager", "exists"]
+- ["C7Library17ConnectionManager", "getCommunicator"]
+- ["C7Library17ConnectionManager", "init"]
+- ["C7Library17ConnectionManager", "killConnection"]
+- ["C7Library17ConnectionManager", "register"]
+- ["C7Library17ConnectionManager", "shared"]
+- !private ["C7Library17ConnectionManager", "sockets"]
+- !private ["Ps28CustomDebugStringConvertible", "index"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "keys"]
+- !private ["Ps28CustomDebugStringConvertible", "removeValue"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "index"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "keys"]
+- !private ["Ps17CustomReflectable", "removeValue"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "address"]
+- !private ["Ps23CustomStringConvertible", "index"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "keys"]
+- !private ["Ps23CustomStringConvertible", "port"]
+- !private ["Ps23CustomStringConvertible", "removeValue"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Vs10Dictionary", "index"]
+- ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "keys"]
+- !private ["Vs10Dictionary", "removeValue"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "address"]
+- !private ["Ps9Equatable", "port"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "index"]
+- ["Ps30ExpressibleByDictionaryLiteral", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "keys"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "removeValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "address"]
+- !private ["Ps8Hashable", "port"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["C7Library4Node", "address"]
+- !private ["C7Library4Node", "port"]
+- !private ["Ps8Sequence", "index"]
+- ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "keys"]
+- !private ["Ps8Sequence", "removeValue"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["C7Library16SocketConnection", "port"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "address"]
+- !private ["Ps9_Hashable", "port"]
+- !private ["Ps10_Indexable", "index"]
+- ["Ps10_Indexable", "init"]
+- !private ["Ps10_Indexable", "keys"]
+- !private ["Ps10_Indexable", "removeValue"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "index"]
+- ["Ps14_IndexableBase", "init"]
+- !private ["Ps14_IndexableBase", "keys"]
+- !private ["Ps14_IndexableBase", "removeValue"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "index"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "keys"]
+- !private ["Ps21_ObjectiveCBridgeable", "removeValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- "Ps7CVarArg"
+- "Ps10Collection"
+- !private "C7Library12Communicator"
+- "C7Library17ConnectionManager"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- !private "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "C7Library4Node"
+- "Ps8Sequence"
+- !private "C7Library16SocketConnection"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps9_Hashable"
+- "Ps10_Indexable"
+- "Ps14_IndexableBase"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Socket.swiftmodule"
+interface-hash: "f74be83798e4a7cb5994fa231b27f659"

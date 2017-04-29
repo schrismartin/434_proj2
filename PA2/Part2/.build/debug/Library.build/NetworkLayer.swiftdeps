@@ -5,6 +5,9 @@ provides-nominal:
 - "C7Library12Communicator"
 provides-member:
 - ["C7Library12Communicator", ""]
+- ["C7Library12Communicator", "ListenHandler"]
+- ["C7Library12Communicator", "listen"]
+- ["C7Library12Communicator", "cancelListen"]
 - ["C7Library12Communicator", "assignAvailability"]
 - ["C7Library12Communicator", "resetSocket"]
 - ["C7Library12Communicator", "NodeUniquenessEvaluator"]
@@ -19,8 +22,9 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"
+- "BooleanLiteralType"
 - "Communicator"
-- !private "Data"
+- "Data"
 - "FloatLiteralType"
 - "Int"
 - "IntegerLiteralType"
@@ -30,6 +34,7 @@ depends-top-level:
 - "String"
 - !private "StringLiteralType"
 - !private "UnicodeScalarType"
+- "Void"
 - !private "fatalError"
 depends-member:
 - !private ["Ps9AnyObject", "Data"]
@@ -44,10 +49,11 @@ depends-member:
 - !private ["Ps9AnyObject", "components"]
 - !private ["Ps9AnyObject", "destination"]
 - !private ["Ps9AnyObject", "fatalError"]
-- !private ["Ps9AnyObject", "fetchPeerData"]
+- !private ["Ps9AnyObject", "fetchData"]
 - !private ["Ps9AnyObject", "getPeer"]
 - !private ["Ps9AnyObject", "getPeerString"]
 - !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isListening"]
 - !private ["Ps9AnyObject", "populateBuffer"]
 - !private ["Ps9AnyObject", "port"]
 - !private ["Ps9AnyObject", "read"]
@@ -81,22 +87,27 @@ depends-member:
 - !private ["Ps10Collection", "popFirst"]
 - !private ["Ps10Collection", "popLast"]
 - ["C7Library12Communicator", "Bool"]
-- !private ["C7Library12Communicator", "Data"]
+- ["C7Library12Communicator", "Data"]
 - ["C7Library12Communicator", "Int"]
+- ["C7Library12Communicator", "ListenHandler"]
 - ["C7Library12Communicator", "Node"]
 - ["C7Library12Communicator", "NodeUniquenessEvaluator"]
 - ["C7Library12Communicator", "Set"]
 - ["C7Library12Communicator", "SocketConnection"]
 - ["C7Library12Communicator", "String"]
+- ["C7Library12Communicator", "Void"]
 - ["C7Library12Communicator", "assignAvailability"]
 - !private ["C7Library12Communicator", "bufferData"]
+- ["C7Library12Communicator", "cancelListen"]
 - ["C7Library12Communicator", "deinit"]
 - !private ["C7Library12Communicator", "fatalError"]
-- !private ["C7Library12Communicator", "fetchPeerData"]
+- !private ["C7Library12Communicator", "fetchData"]
 - ["C7Library12Communicator", "getPeer"]
 - !private ["C7Library12Communicator", "getPeerString"]
 - ["C7Library12Communicator", "getPeers"]
 - ["C7Library12Communicator", "init"]
+- !private ["C7Library12Communicator", "isListening"]
+- ["C7Library12Communicator", "listen"]
 - !private ["C7Library12Communicator", "populateBuffer"]
 - ["C7Library12Communicator", "resetSocket"]
 - !private ["C7Library12Communicator", "sendPeerRequest"]
@@ -400,4 +411,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
 - "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/.build/debug/Socket.swiftmodule"
-interface-hash: "0acee3b2cdb96ded3a512edb1244e908"
+interface-hash: "ccf9799ed4d941b1bed9b9de503f4d02"

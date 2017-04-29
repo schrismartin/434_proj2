@@ -20,6 +20,8 @@ final public class Communicator {
     /// the buffer and replinish when necessary.
     fileprivate var bufferData = [String]()
     
+    fileprivate var isListening = false
+    
     /// Create a `Communicator` meant to interface with a given node while
     /// setting the node's `availibility` flag based on connection status.
     ///
@@ -39,11 +41,32 @@ final public class Communicator {
     ///   - port: Port number to connect to.
     public init(destination: String, port: Int) {
         socket = SocketConnection(destination: destination, port: port)
+        ConnectionManager.shared.register(communicator: self)
+    }
+    
+    deinit {
+        ConnectionManager.shared.killConnection(at: socket.port)
     }
     
 }
 
 extension Communicator {
+    
+    typealias ListenHandler = (_ data: Data, _ port: Int) -> Void
+    
+    func listen(handler: ListenHandler) {
+        guard socket.status == .open else { return }
+        
+        isListening = true
+        while isListening {
+            let data = fetchData()
+            handler(data, socket.port)
+        }
+    }
+    
+    func cancelListen() {
+        isListening = false
+    }
     
     /// Set a node's `availability` flag based on connectivity
     ///
@@ -128,7 +151,7 @@ extension Communicator {
     /// Sends peer request and fetches the results. Stores result in buffer.
     private func populateBuffer() {
         sendPeerRequest()
-        let data = fetchPeerData()
+        let data = fetchData()
         
         let string = String(data: data, encoding: .utf8)!
         bufferData = string.components(separatedBy: "\n")
@@ -152,7 +175,7 @@ extension Communicator {
     /// Get the response from `PEERS` request from the port.
     ///
     /// - Returns: Returned data from socket in response to PEERS data.
-    private func fetchPeerData() -> Data {
+    fileprivate func fetchData() -> Data {
         do {
             var data = Data()
             try _ = socket.read(into: &data)

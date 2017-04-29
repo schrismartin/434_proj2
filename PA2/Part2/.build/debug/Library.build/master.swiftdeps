@@ -1,12 +1,13 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
 options: "9b511ca1df87f80632bbd9eb89dc3372"
-build_time: [546671440, 299619000]
+build_time: [546765916, 591859000]
 inputs:
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Communicator.swift": [546765904, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/ConnectionManager.swift": [546765904, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Extensions.swift": [546669735, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/main.swift": [546668782, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/MainApplication.swift": [546671431, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NetworkLayer.swift": [546667593, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Node.swift": [546666198, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NodeCollection.swift": [546670612, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/SocketConnection.swift": [546666192, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Utilities.swift": [546669757, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/main.swift": [546765903, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/MainApplication.swift": [546765900, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Node.swift": [546765900, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NodeCollection.swift": [546765898, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/SocketConnection.swift": [546765898, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Utilities.swift": [546765896, 0]

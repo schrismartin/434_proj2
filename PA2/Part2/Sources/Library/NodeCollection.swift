@@ -41,7 +41,7 @@ class NodeCollection {
         // nodes has been fulfilled
         while let node = processQueue.popFirst(), !nodes.isFull(expected: expected) {
             
-            let communicator = Communicator(using: node)
+            let communicator = ConnectionManager.shared.getCommunicator(using: node)
             guard communicator.socket.status == .open else { continue }
             
             communicator.getPeers(of: node, evaluator: { (node) -> Bool in
@@ -51,6 +51,19 @@ class NodeCollection {
             })
         }
         
+    }
+    
+    func listenAll() {
+        for node in nodes {
+            let communicator = ConnectionManager.shared.getCommunicator(using: node)
+            
+            DispatchQueue.global().async {
+                communicator.listen(handler: { (data, port) in
+                    print(port, String(data: data, encoding: .utf8)!)
+                })
+            }
+            
+        }
     }
     
     /// Print the nodes
@@ -66,7 +79,7 @@ class NodeCollection {
     ///   - destination: Destination IP Address
     ///   - port: Destionation Port
     private func getInitialNodes(destination: String, port: Int) {
-        let communicator = Communicator(destination: destination, port: port)
+        let communicator = ConnectionManager.shared.getCommunicator(for: destination, port: port)
         guard let initialNode = communicator.getPeer() else { return }
         
         communicator.getPeers(of: initialNode) { (node) -> Bool in

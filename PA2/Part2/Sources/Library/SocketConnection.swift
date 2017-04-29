@@ -81,7 +81,7 @@ public final class SocketConnection {
     }
     
     deinit {
-        socket.close()
+        close()
     }
 }
 
@@ -107,4 +107,7 @@ extension SocketConnection {
         return try socket.read(into: &data)
     }
     
+    public func close() {
+        socket.close()
+    }
 }

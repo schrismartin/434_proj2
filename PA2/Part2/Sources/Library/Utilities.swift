@@ -42,6 +42,10 @@ public class Utils {
     /// This class should not be initialized.
     private init() { }
     
+    public static func wait() {
+        while true { }
+    }
+    
     /// Print the correct usage of the program.
     public class func usage() {
         print("usage:")

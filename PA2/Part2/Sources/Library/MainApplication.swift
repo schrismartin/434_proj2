@@ -21,6 +21,10 @@ class MainApplication: NodeCollectionDelegate {
         
         collection.populate(destination: "160.36.57.98", port: 15012, expected: 240)
         collection.printNodes()
+        
+        ConnectionManager.shared.closeAll()
+        collection.listenAll()
+        Utils.wait()
     }
     
     func populationUpdated(percentage: Double) {
