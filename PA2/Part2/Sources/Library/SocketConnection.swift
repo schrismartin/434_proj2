@@ -51,6 +51,7 @@ public final class SocketConnection {
         } catch let error as Socket.Error {
             // Check for connection refused
             if error.errorCode == -9989 {
+                print("Port \(port) is closed.")
                 status = .closed
             }
         } catch {

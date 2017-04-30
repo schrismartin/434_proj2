@@ -25,6 +25,7 @@ depends-top-level:
 - "String"
 - !private "StringLiteralType"
 - !private "fatalError"
+- !private "print"
 depends-member:
 - !private ["Ps9AnyObject", "Error"]
 - !private ["Ps9AnyObject", "Int32"]
@@ -37,6 +38,7 @@ depends-member:
 - !private ["Ps9AnyObject", "fatalError"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "port"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "read"]
 - !private ["Ps9AnyObject", "socket"]
 - !private ["Ps9AnyObject", "status"]
@@ -129,6 +131,7 @@ depends-member:
 - !private ["C7Library16SocketConnection", "fatalError"]
 - ["C7Library16SocketConnection", "init"]
 - ["C7Library16SocketConnection", "port"]
+- !private ["C7Library16SocketConnection", "print"]
 - ["C7Library16SocketConnection", "read"]
 - !private ["C7Library16SocketConnection", "socket"]
 - ["C7Library16SocketConnection", "status"]

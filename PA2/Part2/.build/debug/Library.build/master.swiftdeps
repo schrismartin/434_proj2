@@ -1,15 +1,15 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
 options: "9b511ca1df87f80632bbd9eb89dc3372"
-build_time: [546901882, 865445000]
+build_time: [546906893, 482130000]
 inputs:
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Communicator.swift": [546900552, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/ConnectionManager.swift": [546889744, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/ConnectionManager.swift": [546906452, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Extensions.swift": [546669735, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/FileManager.swift": [546895855, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/main.swift": [546884804, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/MainApplication.swift": [546901546, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Node.swift": [546897113, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NodeCollection.swift": [546901464, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NodeCollection.swift": [546906690, 0]
   "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/NodeManager.swift": [546890277, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/SocketConnection.swift": [546765898, 0]
-  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Utilities.swift": [546901879, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/SocketConnection.swift": [546906887, 0]
+  "/Users/schrismartin/Documents/School/Spring2017/NetSec/PA2/Part2/Sources/Library/Utilities.swift": [546906284, 0]

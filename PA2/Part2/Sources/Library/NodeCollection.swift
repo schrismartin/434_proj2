@@ -114,6 +114,7 @@ class NodeCollection {
     ///   - port: Destionation Port
     private func getInitialNodes(destination: String, port: Int) {
         let communicator = ConnectionManager.shared.getCommunicator(for: destination, port: port)
+//        guard communicator.socket.status == .open else { fatalError("Initial node is down.") }
         guard let initialNode = communicator.getPeer() else { return }
         
         communicator.getPeers(of: initialNode) { (node) -> Bool in

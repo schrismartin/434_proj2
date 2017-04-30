@@ -52,6 +52,7 @@ public class Utils {
             "    --read-peers filename    : Read peers list from a file\n" +
             "    --write-peers filename   : Write peers list to a file\n" +
             "    --data-path filename     : Listen to rounds, record to file\n" +
+            "    --timeout                : Set the number of duplicate tries before moving to the next node" +
             "    --all                    : Wait until all 20 nodes have full peer lists\n" +
             "    --check                  : Check for availability when reading peers")
         exit(-1)
