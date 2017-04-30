@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_18"
+               BlueprintIdentifier = "OBJ_42"
                BuildableName = "Library"
                BlueprintName = "Library"
                ReferencedContainer = "container:Assignment2.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_18"
+            BlueprintIdentifier = "OBJ_42"
             BuildableName = "Library"
             BlueprintName = "Library"
             ReferencedContainer = "container:Assignment2.xcodeproj">
@@ -55,12 +55,26 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_18"
+            BlueprintIdentifier = "OBJ_42"
             BuildableName = "Library"
             BlueprintName = "Library"
             ReferencedContainer = "container:Assignment2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "--in-peers peerfile.txt"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--out-peers peerfile.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--data-path datafile.txt"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -74,7 +88,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_18"
+            BlueprintIdentifier = "OBJ_42"
             BuildableName = "Library"
             BlueprintName = "Library"
             ReferencedContainer = "container:Assignment2.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_31"
+               BlueprintIdentifier = "OBJ_33"
                BuildableName = "Socket.framework"
                BlueprintName = "Socket"
                ReferencedContainer = "container:Assignment2.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_40"
+               BlueprintIdentifier = "OBJ_42"
                BuildableName = "Library"
                BlueprintName = "Library"
                ReferencedContainer = "container:Assignment2.xcodeproj">
@@ -59,7 +59,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_31"
+            BlueprintIdentifier = "OBJ_33"
             BuildableName = "Socket.framework"
             BlueprintName = "Socket"
             ReferencedContainer = "container:Assignment2.xcodeproj">

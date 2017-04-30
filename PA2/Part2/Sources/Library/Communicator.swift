@@ -22,6 +22,8 @@ final public class Communicator {
     
     fileprivate var isListening = false
     
+    fileprivate var node: Node?
+    
     /// Create a `Communicator` meant to interface with a given node while
     /// setting the node's `availibility` flag based on connection status.
     ///
@@ -31,7 +33,6 @@ final public class Communicator {
         let port = node.port
         
         self.init(destination: destination, port: port)
-        assignAvailability(for: node)
     }
     
     /// Create a socket that talks to a
@@ -42,6 +43,10 @@ final public class Communicator {
     public init(destination: String, port: Int) {
         socket = SocketConnection(destination: destination, port: port)
         ConnectionManager.shared.register(communicator: self)
+        
+        guard let node = NodeManager.shared.getNode(port: port) else { return }
+        assignAvailability(for: node)
+        self.node = node
     }
     
     deinit {
@@ -54,13 +59,16 @@ extension Communicator {
     
     typealias ListenHandler = (_ data: Data, _ port: Int) -> Void
     
-    func listen(handler: ListenHandler) {
+    func listen(handler: @escaping ListenHandler) {
         guard socket.status == .open else { return }
         
         isListening = true
-        while isListening {
+        while true {
             let data = fetchData()
-            handler(data, socket.port)
+            
+            DispatchQueue.main.async {
+                handler(data, self.socket.port)
+            }
         }
     }
     
@@ -103,16 +111,17 @@ extension Communicator {
     ///   - evaluator: Determine whether node is unique
     /// - Returns: Set of peer nodes
     @discardableResult
-    public func getPeers(of node: Node, count: Int = 20, timeout: Int = 10, evaluator: NodeUniquenessEvaluator) -> Set<Node> {
+    public func getPeers(of node: Node, count: Int = 20, timeout: Int? = nil, evaluator: NodeUniquenessEvaluator) -> Set<Node> {
+        let timeout = timeout ?? 10
         var nodeSet = Set<Node>()
         guard socket.status == .open else { return nodeSet }
         
         var counter = 0
-        while nodeSet.count != count, counter < timeout {
-            guard let node = getPeer() else { continue }
-            nodeSet.insert(node)
+        while nodeSet.count != count, (counter < timeout || timeout == -1) {
+            guard let peer = getPeer() else { continue }
+            nodeSet.insert(peer)
             
-            let isUnique = evaluator(node)
+            let isUnique = evaluator(peer)
             if isUnique {
                 counter = 0
             } else {
@@ -128,8 +137,14 @@ extension Communicator {
     ///
     /// - Returns: Peer node
     public func getPeer() -> Node? {
-        let peerData = getPeerString()
-        return Node(payload: peerData)
+        let peerString = getPeerString()
+        let peer = NodeManager.shared.getNode(using: peerString)
+        
+        if let node = node, let peer = peer {
+            NodeManager.shared.registerPeers(for: node.port, with: peer.port)
+        }
+        
+        return peer
     }
     
     /// Get a peer string from the buffer. If buffer is empty, repopulate the
@@ -154,6 +169,7 @@ extension Communicator {
         let data = fetchData()
         
         let string = String(data: data, encoding: .utf8)!
+//        print(string)
         bufferData = string.components(separatedBy: "\n")
         if let last = bufferData.last, last == "" {
             _ = bufferData.popLast() // Remove trailing empty string
@@ -164,6 +180,7 @@ extension Communicator {
     /// write to the port.
     private func sendPeerRequest() {
         let peersRequest = "PEERS\n"
+//        print(peersRequest)
         do {
         _ = try socket.write(from: peersRequest)
         } catch {

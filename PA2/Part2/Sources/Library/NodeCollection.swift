@@ -10,7 +10,7 @@ import Foundation
 
 protocol NodeCollectionDelegate: class {
     
-    func populationUpdated(percentage: Double)
+    func populationUpdated(number: Int, total: Int)
     
 }
 
@@ -33,9 +33,11 @@ class NodeCollection {
     ///   - destination: IP Address of known node in the system
     ///   - port: IP Address of known node in the system
     ///   - expected: Expected number of nodes in the system
-    func populate(destination: String, port: Int, expected: Int? = nil) {
+    func populate(destination: String, port: Int, timeout: Int? = nil, expected: Int? = 240) {
         
+        print("Getting initial nodes")
         getInitialNodes(destination: destination, port: port)
+        print("\(nodes.count) initial nodes acquired.")
         
         // Get peers of each node until queue is empty or expected number of
         // nodes has been fulfilled
@@ -44,7 +46,7 @@ class NodeCollection {
             let communicator = ConnectionManager.shared.getCommunicator(using: node)
             guard communicator.socket.status == .open else { continue }
             
-            communicator.getPeers(of: node, evaluator: { (node) -> Bool in
+            communicator.getPeers(of: node, timeout: timeout, evaluator: { (node) -> Bool in
                 let isUnique = logUnique(node: node)
                 if isUnique { getPercentage(expecting: expected) }
                 return isUnique
@@ -53,24 +55,56 @@ class NodeCollection {
         
     }
     
-    func listenAll() {
+    func getAvailability() {
+        for node in nodes {
+            let manager = ConnectionManager.shared
+            
+            manager.closeAll()
+            _ = manager.getCommunicator(using: node)
+        }
+    }
+    
+    func listenAll(handler: Communicator.ListenHandler? = nil) {
+        var newHandler: Communicator.ListenHandler
+        
+        if let handler = handler {
+            newHandler = handler
+        } else {
+            newHandler = { (data, port) in
+                print(Int(Date().timeIntervalSince1970), port, String(data: data, encoding: .utf8)!)
+            }
+        }
+        
         for node in nodes {
             let communicator = ConnectionManager.shared.getCommunicator(using: node)
             
             DispatchQueue.global().async {
-                communicator.listen(handler: { (data, port) in
-                    print(port, String(data: data, encoding: .utf8)!)
-                })
+                communicator.listen(handler: newHandler)
             }
             
         }
     }
     
     /// Print the nodes
-    func printNodes() {
-        nodes
-            .sorted{ $0.0.port < $0.1.port }
-            .forEach { print($0) }
+    func printNodes(to handler: FileHandler? = nil, availability: Bool = false) {
+        if let handler = handler {
+            handler.eraseContents()
+            nodes
+                .sorted{ $0.0.port < $0.1.port }
+                .map { $0.description.data(using: .utf8)! }
+                .forEach { handler.appendToFile(data: $0) }
+        } else {
+            if availability {
+                nodes
+                    .sorted{ $0.0.port < $0.1.port }
+                    .forEach { print($0, $0.availablility) }
+            } else {
+                nodes
+                    .sorted{ $0.0.port < $0.1.port }
+                    .forEach { print($0) }
+            }
+            
+        }
     }
     
     /// Seed the node set
@@ -94,7 +128,7 @@ class NodeCollection {
     @discardableResult
     private func logUnique(node: Node) -> Bool {
         if !nodes.contains(node) {
-            nodes.insert(node)
+            register(node: node)
             processQueue.append(node)
             return true
         } else {
@@ -102,11 +136,13 @@ class NodeCollection {
         }
     }
     
+    public func register(node: Node) {
+        nodes.insert(node)
+    }
+    
     private func getPercentage(expecting: Int?) {
-        if let expecting = expecting {
-            let percentage = Double(nodes.count) / Double(expecting)
-            delegate?.populationUpdated(percentage: percentage)
-        }
+        let expecting = expecting ?? -1
+        delegate?.populationUpdated(number: nodes.count, total: expecting)
     }
     
 }

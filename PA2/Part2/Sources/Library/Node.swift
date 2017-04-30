@@ -11,6 +11,8 @@ import Foundation
 /// Wrapper class for Node objects
 public final class Node {
     
+    static let defaultAddress = "160.36.57.98"
+    
     /// Marks whether a node is or isn't available.
     ///
     /// - undetermined: Node has not been checked for availability
@@ -36,6 +38,9 @@ public final class Node {
     
     /// Source Port
     public var port: Int
+    
+    /// Peers
+    public var peers = Set<Node>()
     
     /// Marks whether the node can be connected to.
     public var availablility: Availability
@@ -73,18 +78,21 @@ public final class Node {
     ///   - address: IP address of node
     ///   - port: port of node
     ///   - availability: Whether a node can be connected to.
-    private init(id: String, address: String, port: Int, availability: Availability) {
+    public init(id: String, address: String, port: Int, availability: Availability) {
         self.id = id
         self.address = address
         self.port = port
         self.availablility = availability
+        
+        NodeManager.shared.register(node: self)
     }
 }
 
 extension Node: CustomStringConvertible {
     
     public var description: String {
-        return "\(port), \(id), \(availablility.rawValue)"
+        let peers = self.peers.map { $0.port }.sorted()
+        return "\(port), \(id), \(peers)"
     }
     
 }

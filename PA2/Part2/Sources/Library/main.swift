@@ -9,4 +9,8 @@
 import Foundation
 
 // Run the program
-_ = MainApplication(args: CommandLine.arguments)
+do {
+    _ = try MainApplication(args: CommandLine.arguments)
+} catch {
+    print(error)
+}

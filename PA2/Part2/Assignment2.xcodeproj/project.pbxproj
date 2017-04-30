@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_36 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Socket.swift */; };
-		OBJ_37 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* SocketProtocols.swift */; };
-		OBJ_38 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* SocketUtils.swift */; };
-		OBJ_45 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Communicator.swift */; };
-		OBJ_46 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConnectionManager.swift */; };
-		OBJ_47 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Extensions.swift */; };
-		OBJ_48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* main.swift */; };
-		OBJ_49 /* MainApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* MainApplication.swift */; };
-		OBJ_50 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Node.swift */; };
-		OBJ_51 /* NodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* NodeCollection.swift */; };
-		OBJ_52 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* SocketConnection.swift */; };
-		OBJ_53 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Utilities.swift */; };
-		OBJ_55 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Socket.framework */; };
+		OBJ_38 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Socket.swift */; };
+		OBJ_39 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* SocketProtocols.swift */; };
+		OBJ_40 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* SocketUtils.swift */; };
+		OBJ_47 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Communicator.swift */; };
+		OBJ_48 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConnectionManager.swift */; };
+		OBJ_49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Extensions.swift */; };
+		OBJ_50 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FileManager.swift */; };
+		OBJ_51 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* main.swift */; };
+		OBJ_52 /* MainApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* MainApplication.swift */; };
+		OBJ_53 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Node.swift */; };
+		OBJ_54 /* NodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* NodeCollection.swift */; };
+		OBJ_55 /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NodeManager.swift */; };
+		OBJ_56 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SocketConnection.swift */; };
+		OBJ_57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Utilities.swift */; };
+		OBJ_59 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Socket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4E276EB1EB3D963003B1DF5 /* PBXContainerItemProxy */ = {
+		B4D430F91EB6548E00B703C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_31;
+			remoteGlobalIDString = OBJ_33;
 			remoteInfo = Socket;
 		};
 /* End PBXContainerItemProxy section */
@@ -35,75 +37,77 @@
 /* Begin PBXFileReference section */
 		OBJ_10 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		OBJ_12 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_13 /* MainApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApplication.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		OBJ_15 /* NodeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCollection.swift; sourceTree = "<group>"; };
-		OBJ_16 /* SocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		OBJ_19 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
-		OBJ_20 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
-		OBJ_21 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = SOURCE_ROOT; };
-		OBJ_22 /* Sockets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sockets; sourceTree = SOURCE_ROOT; };
-		OBJ_25 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
-		OBJ_26 /* SocketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
-		OBJ_27 /* SocketUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_30 /* Library */ = {isa = PBXFileReference; lastKnownFileType = text; path = Library; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		OBJ_13 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_14 /* MainApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApplication.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		OBJ_16 /* NodeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCollection.swift; sourceTree = "<group>"; };
+		OBJ_17 /* NodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeManager.swift; sourceTree = "<group>"; };
+		OBJ_18 /* SocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		OBJ_21 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
+		OBJ_22 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
+		OBJ_23 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = SOURCE_ROOT; };
+		OBJ_24 /* Sockets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sockets; sourceTree = SOURCE_ROOT; };
+		OBJ_27 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		OBJ_28 /* SocketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		OBJ_29 /* SocketUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
+		OBJ_31 /* Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_32 /* Library */ = {isa = PBXFileReference; lastKnownFileType = text; path = Library; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_39 /* Frameworks */ = {
+		OBJ_41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_54 /* Frameworks */ = {
+		OBJ_58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_55 /* Socket.framework in Frameworks */,
+				OBJ_59 /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_18 /* Tests */ = {
+		OBJ_20 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_23 /* Dependencies */ = {
+		OBJ_25 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* Socket 0.12.45 */,
+				OBJ_26 /* Socket 0.12.45 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_24 /* Socket 0.12.45 */ = {
+		OBJ_26 /* Socket 0.12.45 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* Socket.swift */,
-				OBJ_26 /* SocketProtocols.swift */,
-				OBJ_27 /* SocketUtils.swift */,
+				OBJ_27 /* Socket.swift */,
+				OBJ_28 /* SocketProtocols.swift */,
+				OBJ_29 /* SocketUtils.swift */,
 			);
 			name = "Socket 0.12.45";
 			path = ".build/checkouts/BlueSocket-4701229415198575842/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_28 /* Products */ = {
+		OBJ_30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* Socket.framework */,
-				OBJ_30 /* Library */,
+				OBJ_31 /* Socket.framework */,
+				OBJ_32 /* Library */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -113,13 +117,13 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_18 /* Tests */,
-				OBJ_19 /* build */,
-				OBJ_20 /* Data */,
-				OBJ_21 /* Resources */,
-				OBJ_22 /* Sockets */,
-				OBJ_23 /* Dependencies */,
-				OBJ_28 /* Products */,
+				OBJ_20 /* Tests */,
+				OBJ_21 /* build */,
+				OBJ_22 /* Data */,
+				OBJ_23 /* Resources */,
+				OBJ_24 /* Sockets */,
+				OBJ_25 /* Dependencies */,
+				OBJ_30 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -138,12 +142,14 @@
 				OBJ_9 /* Communicator.swift */,
 				OBJ_10 /* ConnectionManager.swift */,
 				OBJ_11 /* Extensions.swift */,
-				OBJ_12 /* main.swift */,
-				OBJ_13 /* MainApplication.swift */,
-				OBJ_14 /* Node.swift */,
-				OBJ_15 /* NodeCollection.swift */,
-				OBJ_16 /* SocketConnection.swift */,
-				OBJ_17 /* Utilities.swift */,
+				OBJ_12 /* FileManager.swift */,
+				OBJ_13 /* main.swift */,
+				OBJ_14 /* MainApplication.swift */,
+				OBJ_15 /* Node.swift */,
+				OBJ_16 /* NodeCollection.swift */,
+				OBJ_17 /* NodeManager.swift */,
+				OBJ_18 /* SocketConnection.swift */,
+				OBJ_19 /* Utilities.swift */,
 			);
 			name = Library;
 			path = Sources/Library;
@@ -152,12 +158,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_31 /* Socket */ = {
+		OBJ_33 /* Socket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "Socket" */;
+			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "Socket" */;
 			buildPhases = (
-				OBJ_35 /* Sources */,
-				OBJ_39 /* Frameworks */,
+				OBJ_37 /* Sources */,
+				OBJ_41 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,24 +171,24 @@
 			);
 			name = Socket;
 			productName = Socket;
-			productReference = OBJ_29 /* Socket.framework */;
+			productReference = OBJ_31 /* Socket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_40 /* Library */ = {
+		OBJ_42 /* Library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_41 /* Build configuration list for PBXNativeTarget "Library" */;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "Library" */;
 			buildPhases = (
-				OBJ_44 /* Sources */,
-				OBJ_54 /* Frameworks */,
+				OBJ_46 /* Sources */,
+				OBJ_58 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_56 /* PBXTargetDependency */,
+				OBJ_60 /* PBXTargetDependency */,
 			);
 			name = Library;
 			productName = Library;
-			productReference = OBJ_30 /* Library */;
+			productReference = OBJ_32 /* Library */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -201,50 +207,52 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_28 /* Products */;
+			productRefGroup = OBJ_30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_31 /* Socket */,
-				OBJ_40 /* Library */,
+				OBJ_33 /* Socket */,
+				OBJ_42 /* Library */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_35 /* Sources */ = {
+		OBJ_37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_36 /* Socket.swift in Sources */,
-				OBJ_37 /* SocketProtocols.swift in Sources */,
-				OBJ_38 /* SocketUtils.swift in Sources */,
+				OBJ_38 /* Socket.swift in Sources */,
+				OBJ_39 /* SocketProtocols.swift in Sources */,
+				OBJ_40 /* SocketUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_44 /* Sources */ = {
+		OBJ_46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_45 /* Communicator.swift in Sources */,
-				OBJ_46 /* ConnectionManager.swift in Sources */,
-				OBJ_47 /* Extensions.swift in Sources */,
-				OBJ_48 /* main.swift in Sources */,
-				OBJ_49 /* MainApplication.swift in Sources */,
-				OBJ_50 /* Node.swift in Sources */,
-				OBJ_51 /* NodeCollection.swift in Sources */,
-				OBJ_52 /* SocketConnection.swift in Sources */,
-				OBJ_53 /* Utilities.swift in Sources */,
+				OBJ_47 /* Communicator.swift in Sources */,
+				OBJ_48 /* ConnectionManager.swift in Sources */,
+				OBJ_49 /* Extensions.swift in Sources */,
+				OBJ_50 /* FileManager.swift in Sources */,
+				OBJ_51 /* main.swift in Sources */,
+				OBJ_52 /* MainApplication.swift in Sources */,
+				OBJ_53 /* Node.swift in Sources */,
+				OBJ_54 /* NodeCollection.swift in Sources */,
+				OBJ_55 /* NodeManager.swift in Sources */,
+				OBJ_56 /* SocketConnection.swift in Sources */,
+				OBJ_57 /* Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_56 /* PBXTargetDependency */ = {
+		OBJ_60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_31 /* Socket */;
-			targetProxy = B4E276EB1EB3D963003B1DF5 /* PBXContainerItemProxy */;
+			target = OBJ_33 /* Socket */;
+			targetProxy = B4D430F91EB6548E00B703C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -272,7 +280,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_33 /* Debug */ = {
+		OBJ_35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -293,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_34 /* Release */ = {
+		OBJ_36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -335,7 +343,7 @@
 			};
 			name = Release;
 		};
-		OBJ_42 /* Debug */ = {
+		OBJ_44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -353,7 +361,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_43 /* Release */ = {
+		OBJ_45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -383,20 +391,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_32 /* Build configuration list for PBXNativeTarget "Socket" */ = {
+		OBJ_34 /* Build configuration list for PBXNativeTarget "Socket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_33 /* Debug */,
-				OBJ_34 /* Release */,
+				OBJ_35 /* Debug */,
+				OBJ_36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_41 /* Build configuration list for PBXNativeTarget "Library" */ = {
+		OBJ_43 /* Build configuration list for PBXNativeTarget "Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_42 /* Debug */,
-				OBJ_43 /* Release */,
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -12,16 +12,21 @@ public class ConnectionManager {
     
     static let shared = ConnectionManager()
     
-    private var sockets = [Int: Communicator]()
+    private var communicators = [Int: Communicator]()
     
     func getCommunicator(using node: Node) -> Communicator {
         let address = node.address
         let port = node.port
+        
+        if let communicator = communicators[port] {
+            return communicator
+        }
+        
         return getCommunicator(for: address, port: port)
     }
     
     func getCommunicator(for address: String, port: Int) -> Communicator {
-        if let socket = sockets[port] {
+        if let socket = communicators[port] {
             return socket
         }
         
@@ -29,14 +34,14 @@ public class ConnectionManager {
     }
     
     func closeAll() {
-        for port in sockets.keys {
+        for port in communicators.keys {
             killConnection(at: port)
         }
     }
     
     @discardableResult
     func killConnection(at port: Int) -> Bool {
-        if sockets.removeValue(forKey: port) != nil {
+        if communicators.removeValue(forKey: port) != nil {
             return true
         }
         return false
@@ -44,11 +49,11 @@ public class ConnectionManager {
     
     func register(communicator: Communicator) {
         let port = communicator.socket.port
-        sockets[port] = communicator
+        communicators[port] = communicator
     }
     
     func exists(port: Int) -> Bool {
-        if sockets.index(forKey: port) != nil {
+        if communicators.index(forKey: port) != nil {
             return true
         }
         return false

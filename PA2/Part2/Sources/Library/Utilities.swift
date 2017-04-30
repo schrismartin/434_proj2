@@ -48,7 +48,12 @@ public class Utils {
     
     /// Print the correct usage of the program.
     public class func usage() {
-        print("usage:")
+        print("usage: args\n" +
+            "    --read-peers filename    : Read peers list from a file\n" +
+            "    --write-peers filename   : Write peers list to a file\n" +
+            "    --data-path filename     : Listen to rounds, record to file\n" +
+            "    --all                    : Wait until all 20 nodes have full peer lists\n" +
+            "    --check                  : Check for availability when reading peers")
         exit(-1)
     }
     
@@ -61,5 +66,46 @@ public class Utils {
             return prev.hashValue ^ current.hashValue
         })
     }
+}
+
+/// Struct containt program arguments
+struct Arguments {
     
+    var inpeerPath: String?
+    var outpeerPath: String?
+    var dataPath: String?
+    var timeout: Int?
+    var all = false
+    var checkForPublic = false
+    
+    /// Create an arguments struct given an array of strings
+    ///
+    /// - Parameter args: Base array
+    /// - Throws: `badArgc` or `badArgv`
+    init(args: [String]) throws {
+        var args = args
+        args.popFirst() // Remove program name
+        
+        if args.count == 0 { Utils.usage() }
+        
+        while let arg = args.popFirst() {
+            switch arg {
+            case "--read-peers":
+                inpeerPath = args.popFirst()
+            case "--write-peers":
+                outpeerPath = args.popFirst()
+            case "--data-path":
+                dataPath = args.popFirst()
+            case "--timeout":
+                if let string = args.popFirst() { timeout = Int(string) }
+            case "--all":
+                all = true
+            case "--check":
+                checkForPublic = true
+            default:
+                print("Unrecognized arg \(arg)")
+                Utils.usage()
+            }
+        }
+    }
 }
