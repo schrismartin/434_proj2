@@ -151,14 +151,14 @@ int main(int argc, char** argv) {
 		} else if(temp_str == "OFFER") {
 			fin >> temp_msg;
 
-			if(OFFER.find(temp_msg) != OFFER.end()) {
+			if(OFFER.find(temp_msg) == OFFER.end() && OFFER.size() < b) {
 				send[index(temp_port)] = 1;
 				OFFER.insert(temp_msg);
 			}
 		} else if(temp_str == "ACK") {
 			fin >> temp_msg;
 
-			if(ACK.find(temp_msg) != ACK.end()) {
+			if(ACK.find(temp_msg) == ACK.end() && ACK.size() < b) {
 				receive[index(temp_port)] = 1;
 				ACK.insert(temp_msg);
 			}
