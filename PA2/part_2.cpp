@@ -87,8 +87,8 @@ int main(int argc, char** argv) {
 	}
 
 	//initialize values for reading the collection
-	send.resize(240, 0);
-	receive.resize(240, 0);
+	send.resize(120, 0);
+	receive.resize(120, 0);
 
 	OFFER.clear();
 	ACK.clear();
@@ -107,6 +107,20 @@ int main(int argc, char** argv) {
 				//Gives us the max number of messages sent in a round
 				if(OFFER.size() > b) b = OFFER.size();
 
+/*
+				//FIXME
+				for(int i = 0; i < send.size(); i++) {
+					cout << send[i] << " ";
+				}
+				cout << endl;
+				for(int i = 0; i < receive.size(); i++) {
+					cout << receive[i] << " ";
+				}
+				cout << endl;
+*/
+
+
+
 				for(int i = 0; i < send.size(); i++) {
 					//if a node sent a message then update its appropriate fields (t and O)
 					if(send[i] == 1) {
@@ -124,8 +138,8 @@ int main(int argc, char** argv) {
 				}
 
 				//reset values for next round
-				send.resize(240, 0);
-				receive.resize(240, 0);
+				send.resize(120, 0);
+				receive.resize(120, 0);
 
 				OFFER.clear();
 				ACK.clear();
