@@ -5,7 +5,7 @@ import errno
 
 class node:
     def __init__(self, string):
-        line = string
+        line = string.lstrip("\n")
         one = line.find("8")
         two = line.find("@")
         three = two + 1
@@ -33,7 +33,7 @@ class node:
             self.status = 1
             s.close()
 
-    def peer(self):
+"""    def peer(self):
         if self.status == 0:
             print "Cannot call .peer() on a private node\n"
             return
@@ -48,7 +48,7 @@ class node:
             s.close()
 
             return peer
-
+"""
 
 nodes = []
 ports = []
@@ -83,15 +83,23 @@ while len(nodes) < totalNodes:
     else:
         temp = []
         
-        while len(temp) < 20:
-            m = n.peer()
-                
-            if m.port not in temp:
-                temp.append(m.port)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((n.addr, n.port))
 
-                if m.port not in ports:
-                    ports.append(m.port)
-                    nodes.append(m)
+        while len(temp) < 20:
+            s.send('PEERS\n')
+
+            peer = node(s.recv(1024))
+
+            if peer.port not in temp:
+                temp.append(peer.port)
+
+                if peer.port not in ports:
+                    ports.append(peer.port)
+                    nodes.append(peer)
+        
+        s.close()
+
         i = i + 1
                     
 for n in nodes:
