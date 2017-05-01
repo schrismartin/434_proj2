@@ -104,22 +104,7 @@ int main(int argc, char** argv) {
 			}
 		}
 	}
-/*
-	//FIXME
-	for(int i = 0; i < nodes.size(); i++) {
-		cout << "t = " << nodes[i]->t << " and t' = " << nodes[i]->not_t << endl;
-		cout << "O = ";
-		for(int j = 0; j < nodes[i]->O.size(); j++) {
-			cout << nodes[i]->O[j] << " ";
-		}
-		cout << endl << endl;
-		cout << "U = ";
-		for(int j = 0; j < nodes[i]->U.size(); j++) {
-			cout << nodes[i]->U[j] << " ";
-		}
-		cout << endl << endl;
-	}
-*/
+	
 	//Calculates the V vector for every node
 	for(int i = 0; i < nodes.size(); i++) {
 		for(int j = 0; j < 260; j++) {
